@@ -26,3 +26,4 @@ export * from "./types.js";
 export { AIAgentGatherer } from "./gatherer.js";
 export { MeshGeneratorAgent } from "./mesh.js";
 export { ModalGridAgent } from "./grid.js";
+export * from "./render.js";

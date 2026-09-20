@@ -4,9 +4,18 @@ A deterministic content-management and world-generation engine based on the **Pr
 
 ## Status to completion
 
-- **Implemented:** deterministic artifact storage, filtering/gathering, mesh generation, 64×64 modal grids, seeded world generation, provenance contracts, and reproducibility tests.
-- **CI workflow:** intentionally not included in this update.
-- **Current best next step:** add the first rendering adapter or browser-facing integration behind the existing contracts, then add CI gates for the build and test commands.
+- **Implemented:** deterministic artifact storage, filtering/gathering, mesh generation, 64×64 modal grids, seeded world generation, provenance contracts, reproducibility tests, and a renderer-neutral output adapter.
+- **CI workflow:** configured and green. GitHub Actions runs the real build and test commands on pushes to `main` and on pull requests.
+- **Current best next step:** add a concrete browser or native rendering adapter behind the exported `RenderAdapter` contract.
+
+The current verification gates are:
+
+```text
+npm run build
+npm test
+```
+
+Latest CI workflow: https://github.com/icealys68654-tech/GAME-ENGINE-CMS/actions/workflows/ci.yml
 
 ## Pipeline
 
@@ -56,4 +65,4 @@ npm run build
 npm test
 ```
 
-The test command compiles TypeScript and runs the compiled Node test files. These commands are the intended build and verification gates for future CI configuration.
+The test command compiles TypeScript and runs the compiled Node test files. GitHub Actions executes the same commands as the repository's CI gates.
